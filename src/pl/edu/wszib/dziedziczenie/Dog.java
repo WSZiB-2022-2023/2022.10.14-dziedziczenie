@@ -15,4 +15,15 @@ public class Dog extends Pet {
     public void setDodatkowaRzecz(int dodatkowaRzecz) {
         this.dodatkowaRzecz = dodatkowaRzecz;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(!(obj instanceof Dog)) {
+            return false;
+        }
+        Dog dog = (Dog) obj;
+        return this.getName().equals(dog.getName()) &&
+                this.getRace().equals(dog.getRace()) &&
+                this.getAge() == dog.getAge();
+    }
 }

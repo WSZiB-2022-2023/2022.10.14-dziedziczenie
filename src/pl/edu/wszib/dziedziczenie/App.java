@@ -48,5 +48,7 @@ public class App {
 
         Pet pet = new Snake("pyton", "Ptyon", 10);
         pet.walk();
+
+        System.out.println(snake);
     }
 }
